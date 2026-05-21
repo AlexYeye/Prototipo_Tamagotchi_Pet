@@ -1,0 +1,12 @@
+#ifndef UI_H
+#define UI_H
+
+#include <SFML/Graphics.hpp>
+
+class UI
+{
+public:
+    void draw(sf::RenderWindow& window);
+};
+
+#endif

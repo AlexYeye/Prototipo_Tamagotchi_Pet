@@ -1,0 +1,10 @@
+# Compilação e Binários
+bin/
+obj/
+
+# Arquivos de layout e dependências do Code::Blocks
+*.depend
+*.layout
+
+# Saves locais do jogo (remova a linha abaixo se quiser salvar o progresso no git)
+save/
