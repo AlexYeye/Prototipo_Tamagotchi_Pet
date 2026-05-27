@@ -1,23 +1,12 @@
-//#include "core/Game.h"
+#include "core/Game.h"
 #include "entities/Pet.h"
-//#include "ui/UI.h"
-//#include "header.h"
+#include "ui/UI.h"
 #include <iostream>
 
 int main()
 {
-    Pet Alien("Alex");
-
-    Alien.alimentar();
-    Alien.brincar();
-    Alien.dormir();
-    Alien.alimentar();
-    Alien.brincar();
-    Alien.dormir();
-    Alien.brincar();
-    Alien.brincar();
-
-    Alien.imprimir();
+    Game game;
+    game.run();
 
     return 0;
 }

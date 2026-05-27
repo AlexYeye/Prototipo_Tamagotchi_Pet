@@ -1,13 +1,15 @@
 #ifndef PET_H
 #define PET_H
 
+#include "Entity.h"
 #include <string>
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
-class Pet
+class Pet: public Entity
 {
 private:
-    std::string nome;
+    //std::string nome;
     std::string personalidade;
     std::string humor;
 
@@ -16,6 +18,9 @@ private:
     int felicidade;
     int xp_acumulado;
     int nivel;
+
+    sf::Texture texture;
+    sf::Sprite* sprite;
 
 public:
 
@@ -36,6 +41,9 @@ public:
     int getNivel();
 
     std::string getNome();
+
+    void update() override;
+    void render(sf::RenderWindow& window) override;
 };
 
 #endif

@@ -14,6 +14,11 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Tamagotchi_Namorados" prefix_auto="1" extension_auto="1" />
@@ -25,15 +30,24 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="X:/Usuário/Programas/GameDrive/GameLib/SFML-3.1.0-windows-gcc-14.2.0-mingw-64-bit/SFML-3.1.0/include" />
 		</Compiler>
+		<Linker>
+			<Add directory="X:/Usuário/Programas/GameDrive/GameLib/SFML-3.1.0-windows-gcc-14.2.0-mingw-64-bit/SFML-3.1.0/lib" />
+		</Linker>
 		<Unit filename="core/Game.cpp" />
 		<Unit filename="core/Game.h" />
+		<Unit filename="entities/Entity.cpp" />
+		<Unit filename="entities/Entity.h" />
 		<Unit filename="entities/Pet.cpp" />
 		<Unit filename="entities/Pet.h" />
 		<Unit filename="header.cpp" />

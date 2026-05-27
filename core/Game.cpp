@@ -1,9 +1,17 @@
 #include "Game.h"
+#include <iostream>
 
 Game::Game()
-: window(sf::VideoMode({800, 600}), "Pet Game")
+    : window(sf::VideoMode({450, 800}), "Tamagotchi Namorados"),
+      pet("Flufly")
 {
+    std::cout << "Jogo iniciado!" << std::endl;
+    window.setFramerateLimit(60);
+}
 
+Game::~Game()
+{
+    std::cout << "Jogo encerrado!" << std::endl;
 }
 
 void Game::run()
@@ -29,12 +37,17 @@ void Game::processEvents()
 
 void Game::update()
 {
-
+    pet.update();
 }
 
 void Game::render()
 {
-    window.clear();
+    // Cor de fundo
+    window.clear(sf::Color(30, 30, 30));
 
+    // Desenha o pet
+    pet.render(window);
+
+    // Mostra na tela
     window.display();
 }
