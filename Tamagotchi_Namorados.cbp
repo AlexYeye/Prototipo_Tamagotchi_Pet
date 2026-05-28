@@ -50,8 +50,9 @@
 		<Unit filename="entities/Entity.h" />
 		<Unit filename="entities/Pet.cpp" />
 		<Unit filename="entities/Pet.h" />
-		<Unit filename="header.cpp" />
-		<Unit filename="header.h" />
+		<Unit filename="graphics/BackgroundRenderer.cpp" />
+		<Unit filename="graphics/PetRenderer.cpp" />
+		<Unit filename="graphics/PetRenderer.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="ui/UI.h" />
 		<Extensions />

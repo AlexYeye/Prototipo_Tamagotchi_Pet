@@ -5,6 +5,7 @@
 
 #include "../entities/Pet.h"
 #include "../graphics/PetRenderer.h"
+#include "../graphics/BackgroundRenderer.h"
 
 class Game
 {
@@ -13,6 +14,7 @@ private:
     sf::RenderWindow window;
 
     Pet pet;
+    BackgroundRenderer backgroundRenderer;
     PetRenderer petRenderer;
 
 public:

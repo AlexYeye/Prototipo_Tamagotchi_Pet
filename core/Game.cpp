@@ -1,10 +1,6 @@
 #include "Game.h"
 #include <iostream>
 
-#include "Game.h"
-
-#include <iostream>
-
 Game::Game()
     : window(sf::VideoMode({450, 800}), "Tamagotchi Namorados"),
       pet("Samuel")
@@ -50,6 +46,8 @@ void Game::update()
 void Game::render()
 {
     window.clear(sf::Color(30, 30, 30));
+
+    backgroundRenderer.render(window);
 
     petRenderer.render(window);
 
