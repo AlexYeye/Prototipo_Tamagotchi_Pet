@@ -4,7 +4,6 @@
 #include "Entity.h"
 #include <string>
 #include <iostream>
-#include <SFML/Graphics.hpp>
 
 class Pet: public Entity
 {
@@ -18,9 +17,6 @@ private:
     int felicidade;
     int xp_acumulado;
     int nivel;
-
-    sf::Texture texture;
-    sf::Sprite* sprite;
 
 public:
 
@@ -43,7 +39,6 @@ public:
     std::string getNome();
 
     void update() override;
-    void render(sf::RenderWindow& window) override;
 };
 
 #endif

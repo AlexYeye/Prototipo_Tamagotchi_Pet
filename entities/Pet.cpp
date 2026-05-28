@@ -8,21 +8,6 @@ Pet::Pet()
     std::cout<<"Construtor de Pet Chamado"<<std::endl;
     id ++;
 
-    if(!texture.loadFromFile("assets/images/pet.png"))
-{
-    std::cout << "Erro ao carregar imagem!" << std::endl;
-}
-
-sprite = new sf::Sprite(texture);
-
-sprite->setScale({1.8f, 1.8f});
-
-sf::FloatRect bounds = sprite->getGlobalBounds();
-
-sprite->setPosition({
-    (450 - bounds.size.x) / 2.f,
-    (800 - bounds.size.y) / 2.f
-});
 }
 Pet::Pet(std::string nomePet)
     : Entity(nomePet),
@@ -35,22 +20,8 @@ Pet::Pet(std::string nomePet)
     std::cout<<"Pet de nome: "<< this->nome << " esta na existencia"<<std::endl;
     id ++;
 
-    if(!texture.loadFromFile("assets/images/pet.png"))
-{
-    std::cout << "Erro ao carregar imagem!" << std::endl;
 }
 
-sprite = new sf::Sprite(texture);
-
-sprite->setScale({0.7f, 0.7f});
-
-sf::FloatRect bounds = sprite->getGlobalBounds();
-
-sprite->setPosition({
-    (450 - bounds.size.x) / 2.f,
-    (800 - bounds.size.y) / 2.f
-});
-}
 
 Pet::~Pet()
 {
@@ -58,7 +29,6 @@ Pet::~Pet()
    std::cout<<"Destruindo Pet da Existencia"<<std::endl;
    id --;
 
-   delete sprite;
 }
 
 //Depois criar contador para Maximos de pontos de Felicidade que se pode ganhar alimentando no periodo do dia.
@@ -182,7 +152,3 @@ void Pet::update()
     std::cout << "Update Chamado" << std::endl;
 }
 
-void Pet::render(sf::RenderWindow& window)
-{
-    window.draw(*sprite);
-}

@@ -1,11 +1,16 @@
 #include "Game.h"
 #include <iostream>
 
+#include "Game.h"
+
+#include <iostream>
+
 Game::Game()
     : window(sf::VideoMode({450, 800}), "Tamagotchi Namorados"),
-      pet("Flufly")
+      pet("Samuel")
 {
     std::cout << "Jogo iniciado!" << std::endl;
+
     window.setFramerateLimit(60);
 }
 
@@ -19,7 +24,9 @@ void Game::run()
     while(window.isOpen())
     {
         processEvents();
+
         update();
+
         render();
     }
 }
@@ -42,12 +49,9 @@ void Game::update()
 
 void Game::render()
 {
-    // Cor de fundo
     window.clear(sf::Color(30, 30, 30));
 
-    // Desenha o pet
-    pet.render(window);
+    petRenderer.render(window);
 
-    // Mostra na tela
     window.display();
 }

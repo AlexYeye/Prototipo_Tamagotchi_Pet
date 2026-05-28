@@ -11,6 +11,3 @@ int main()
     return 0;
 }
 
-    /*Game Flufly;
-
-    Flufly.run();*/
